@@ -75,12 +75,30 @@
 // Array Reverse
 
 function reverse(arr) {
+    var arr1 = [];
     
-    var arr1 = arr.reverse()
-    return arr;
+    var j = 0; 
+    
+    for(var i=arr.length-1 ; i>=0 ; i--){
+        arr1[j]= arr[i];
+        j++;
+    }
+
+    return arr1;
 }
     
 var result = reverse(["a", "b", "c", "d", "e"]);
+console.log(result); // we expect back ["e", "d", "c", "b", "a"]
+
+// Array Reverse
+
+function reverse1(arr) {
+
+    arr.reverse()
+    return arr;
+}
+
+var result = reverse1(["a", "b", "c", "d", "e"]);
 console.log(result); // we expect back ["e", "d", "c", "b", "a"]
 
 
